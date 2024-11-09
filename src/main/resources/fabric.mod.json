@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "zombified_pigmen_trader",
+  "version": "${version}",
+  "name": "Zombified Pigmen Trader",
+  "description": "Adds a new form of Villagers (Pigmen Traders)",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/zombified_pigmen_trader/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "de.constt.zombified_pigmen_trader.client.Zombified_pigmen_traderClient"
+    ],
+    "main": [
+      "de.constt.zombified_pigmen_trader.Zombified_pigmen_trader"
+    ]
+  },
+  "mixins": [
+    "zombified_pigmen_trader.mixins.json",
+    {
+      "config": "zombified_pigmen_trader.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
