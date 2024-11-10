@@ -1,26 +1,18 @@
 package de.constt.zombified_pigmen_trader;
 
-import de.constt.zombified_pigmen_trader.entity.ModEntities;
-import de.constt.zombified_pigmen_trader.entity.custom.PigmanEntity;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.player.UseEntityCallback;
-import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.SpawnGroup;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.mob.ZombifiedPiglinEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Items;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
-import net.minecraft.util.Identifier;
 import net.minecraft.util.hit.EntityHitResult;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
@@ -62,8 +54,5 @@ public class Zombified_pigmen_trader implements ModInitializer {
                 return ActionResult.PASS;
             }
         });
-
-
-        FabricDefaultAttributeRegistry.register(ModEntities.PIGMEN, PigmanEntity.createPigmenAttributes());
     }
 }

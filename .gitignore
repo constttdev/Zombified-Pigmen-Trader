@@ -10,9 +10,9 @@ out/
 *.rar
 .gradle
 .gradle/
+gradle/
 build/
 run/
-gradle/
 .run/
 .run
 !gradle-wrapper.jar
