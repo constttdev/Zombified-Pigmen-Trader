@@ -64,11 +64,13 @@ public class Zombified_pigmen_trader implements ModInitializer {
 
                                 try {
                                     Thread.sleep(randomNumber);
-                                    zombifiedPiglin.kill();
-                                    world.spawnEntity(PigmenEntity);
                                 } catch (InterruptedException e) {
                                     throw new RuntimeException(e);
                                 }
+                                zombifiedPiglin.kill();
+                                PigmenEntity pEntity = new PigmenEntity(PIGMAN,world);
+                                world.spawnEntity(pEntity);
+                                pEntity.setPos(zombifiedPiglin.getX(), zombifiedPiglin.getY(), zombifiedPiglin.getZ());
                                 return ActionResult.SUCCESS;
                             }
                         }
